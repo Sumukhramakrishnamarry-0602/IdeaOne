@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+  <defs><pattern id="ht5" width="11" height="11" patternUnits="userSpaceOnUse"><circle cx="5.5" cy="5.5" r="3.3" fill="#1A1A1A" opacity="0.5"/></pattern></defs>
+  <rect width="1200" height="900" fill="#F5E6A8"/><rect x="6" y="6" width="1188" height="888" fill="none" stroke="#1A1A1A" stroke-width="8"/>
+  <rect x="0" y="0" width="1200" height="900" fill="url(#ht5)" opacity="0.20"/>
+  <circle cx="460" cy="400" r="230" fill="#D63C1E" opacity="0.78" stroke="#1A1A1A" stroke-width="7"/>
+  <circle cx="740" cy="400" r="230" fill="#2D6E5E" opacity="0.78" stroke="#1A1A1A" stroke-width="7"/>
+  <circle cx="600" cy="600" r="230" fill="#2A5C8A" opacity="0.78" stroke="#1A1A1A" stroke-width="7"/>
+  <text x="400" y="340" fill="#FFFDF6" font-family="Anton, sans-serif" font-size="30">MEDIA</text>
+  <text x="730" y="340" fill="#FFFDF6" font-family="Anton, sans-serif" font-size="30">TECH</text>
+  <text x="540" y="700" fill="#FFFDF6" font-family="Anton, sans-serif" font-size="26">ANALYTICS</text>
+  
+  <rect x="36" y="796" width="268" height="40" fill="#1A1A1A"/>
+  <text x="50" y="822" font-family="Anton, sans-serif" font-size="26" fill="#F5E6A8" letter-spacing="0.02em">THE GROWTH STACK</text>
+  <text x="50" y="852" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700" fill="#D63C1E">STRATEGY — HOW IT ALL CONNECTS</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+  <defs><pattern id="ht10" width="11" height="11" patternUnits="userSpaceOnUse"><circle cx="5.5" cy="5.5" r="3.3" fill="#1A1A1A" opacity="0.5"/></pattern></defs>
+  <rect width="1200" height="900" fill="#F2C744"/><rect x="6" y="6" width="1188" height="888" fill="none" stroke="#1A1A1A" stroke-width="8"/>
+  <rect x="0" y="0" width="1200" height="900" fill="url(#ht10)" opacity="0.18"/>
+  <circle cx="600" cy="380" r="280" fill="none" stroke="#1A1A1A" stroke-width="5" opacity="0.7"/><circle cx="600" cy="380" r="220" fill="none" stroke="#1A1A1A" stroke-width="5" opacity="0.58"/><circle cx="600" cy="380" r="160" fill="none" stroke="#1A1A1A" stroke-width="5" opacity="0.45999999999999996"/><circle cx="600" cy="380" r="100" fill="none" stroke="#1A1A1A" stroke-width="5" opacity="0.33999999999999997"/>
+  <g transform="translate(740,520) rotate(35)">
+    <circle r="90" fill="#FFFDF6" stroke="#1A1A1A" stroke-width="10"/>
+    <line x1="64" y1="64" x2="170" y2="170" stroke="#1A1A1A" stroke-width="18" stroke-linecap="round"/>
+  </g>
+  
+  <rect x="36" y="796" width="268" height="40" fill="#1A1A1A"/>
+  <text x="50" y="822" font-family="Anton, sans-serif" font-size="26" fill="#F5E6A8" letter-spacing="0.02em">SEO &amp; VISIBILITY</text>
+  <text x="50" y="852" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700" fill="#D63C1E">TECH — SEARCH FOR CREATORS</text>
+</svg>

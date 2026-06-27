@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+  <defs><pattern id="ht2" width="11" height="11" patternUnits="userSpaceOnUse"><circle cx="5.5" cy="5.5" r="3.3" fill="#1A1A1A" opacity="0.5"/></pattern></defs>
+  <rect width="1200" height="900" fill="#2A5C8A"/><rect x="6" y="6" width="1188" height="888" fill="none" stroke="#1A1A1A" stroke-width="8"/>
+  <rect x="0" y="0" width="1200" height="900" fill="url(#ht2)" opacity="0.16"/>
+  <!-- funnel shape -->
+  <path d="M260,140 L940,140 L700,420 L700,640 L500,640 L500,420 Z" fill="#F2C744" stroke="#1A1A1A" stroke-width="8" stroke-linejoin="round"/>
+  <line x1="260" y1="280" x2="940" y2="280" stroke="#1A1A1A" stroke-width="5" opacity="0.5"/>
+  <line x1="370" y1="420" x2="830" y2="420" stroke="#1A1A1A" stroke-width="5" opacity="0.5"/>
+  <circle cx="600" cy="200" r="22" fill="#D63C1E" stroke="#1A1A1A" stroke-width="5"/>
+  <circle cx="600" cy="350" r="22" fill="#D63C1E" stroke="#1A1A1A" stroke-width="5"/>
+  <circle cx="600" cy="540" r="22" fill="#2D6E5E" stroke="#1A1A1A" stroke-width="5"/>
+  
+  <rect x="36" y="796" width="238" height="40" fill="#1A1A1A"/>
+  <text x="50" y="822" font-family="Anton, sans-serif" font-size="26" fill="#F5E6A8" letter-spacing="0.02em">FUNNEL CLARITY</text>
+  <text x="50" y="852" font-family="JetBrains Mono, monospace" font-size="14" font-weight="700" fill="#D63C1E">TECH SYSTEM — SAAS FOUNDER</text>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <pattern id="ht" width="11" height="11" patternUnits="userSpaceOnUse">
+      <circle cx="5.5" cy="5.5" r="3.2" fill="#1A1A1A"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="#F5E6A8"/>
+  <rect width="1200" height="630" fill="url(#ht)" opacity="0.14"/>
+  <rect x="6" y="6" width="1188" height="618" fill="none" stroke="#1A1A1A" stroke-width="10"/>
+
+  <!-- bolt accent -->
+  <path d="M1010 40 L930 230 L1000 230 L960 380 L1110 170 L1030 170 Z"
+        fill="#F2C744" stroke="#1A1A1A" stroke-width="8" stroke-linejoin="round" opacity="0.95"/>
+
+  <text x="80" y="270" font-family="Anton, sans-serif" font-size="108" fill="#1A1A1A" letter-spacing="0.01em">IdeaOne</text>
+
+  <rect x="78" y="410" width="430" height="46" fill="#1A1A1A"/>
+  <text x="98" y="442" font-family="JetBrains Mono, monospace" font-size="20" font-weight="700" fill="#F5E6A8" letter-spacing="0.12em">CREATOR GROWTH SYSTEM</text>
+
+  <text x="80" y="520" font-family="'Permanent Marker', cursive" font-size="34" fill="#2D6E5E" transform="rotate(-1.5 80 520)">Systems live forever.</text>
+</svg>
