@@ -8,8 +8,8 @@ The contact form posts to /api/contact and is ready for Vercel serverless deploy
 
 ### Required environment variables
 Add these in your Vercel project settings:
-- MONGODB_URI: your MongoDB Atlas connection string
-- MONGODB_DB: optional database name, defaults to ideaone
+- NEXT_PUBLIC_SUPABASE_URL: your Supabase project URL
+- NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: your Supabase publishable key
 
 ### Deploy
 1. Push these changes to GitHub.

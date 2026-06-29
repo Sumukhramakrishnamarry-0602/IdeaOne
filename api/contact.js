@@ -1,4 +1,4 @@
-const { MongoClient } = require('mongodb');
+const { createClient } = require('@supabase/supabase-js');
 
 module.exports = async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -31,35 +31,36 @@ module.exports = async function handler(req, res) {
       return;
     }
 
-    const uri = process.env.MONGODB_URI;
-    if (!uri) {
-      console.warn('MONGODB_URI is not set. Contact form submission accepted but not stored.');
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+    const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY;
+
+    if (!supabaseUrl || !supabaseKey) {
+      console.warn('Supabase credentials are not set. Contact form submission accepted but not stored.');
       res.status(200).json({ success: true, stored: false });
       return;
     }
 
-    const client = new MongoClient(uri);
-    try {
-      await client.connect();
-      const db = client.db(process.env.MONGODB_DB || 'ideaone');
-      const collection = db.collection('contact_submissions');
+    const supabase = createClient(supabaseUrl, supabaseKey, {
+      auth: { persistSession: false, autoRefreshToken: false }
+    });
 
-      await collection.insertOne({
-        first_name: firstName,
-        last_name: lastName,
-        email,
-        handle,
-        company,
-        interest,
-        message,
-        whatsapp_ok: whatsappOk,
-        created_at: new Date()
-      });
+    const { error } = await supabase.from('contact_submissions').insert({
+      first_name: firstName,
+      last_name: lastName,
+      email,
+      handle,
+      company,
+      interest,
+      message,
+      whatsapp_ok: whatsappOk,
+      created_at: new Date().toISOString()
+    });
 
-      res.status(200).json({ success: true, stored: true });
-    } finally {
-      await client.close();
+    if (error) {
+      throw error;
     }
+
+    res.status(200).json({ success: true, stored: true });
   } catch (error) {
     console.error('Contact form submission failed:', error);
     res.status(500).json({ error: 'Something went wrong while saving your message.' });
