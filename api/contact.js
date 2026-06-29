@@ -1,17 +1,17 @@
 const { MongoClient } = require('mongodb');
 
-const uri = process.env.MONGODB_URI;
 const dbName = process.env.MONGODB_DB || 'ideaone';
 const collectionName = process.env.MONGODB_COLLECTION || 'contacts';
-
-if (!uri) {
-  throw new Error('Missing MONGODB_URI environment variable.');
-}
 
 let cachedClient = global._mongoClient;
 let cachedDb = global._mongoDb;
 
 async function connectToDatabase() {
+  const uri = process.env.MONGODB_URI;
+  if (!uri) {
+    throw new Error('Missing MONGODB_URI environment variable.');
+  }
+
   if (cachedClient && cachedDb) {
     return { client: cachedClient, db: cachedDb };
   }
@@ -28,7 +28,7 @@ async function connectToDatabase() {
   return { client, db };
 }
 
-module.exports = async function (req, res) {
+module.exports = async function handler(req, res) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
     return res.status(405).json({ error: 'Method not allowed.' });
