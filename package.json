@@ -1,0 +1,12 @@
+{
+  "name": "ideaone",
+  "version": "1.0.0",
+  "private": true,
+  "description": "IdeaOne marketing site with Vercel-ready contact form handling",
+  "scripts": {
+    "test": "node -e \"const handler = require('./api/contact'); if (typeof handler !== 'function') { throw new Error('contact handler not exported'); } console.log('contact handler ok');\""
+  },
+  "dependencies": {
+    "mongodb": "^6.10.1"
+  }
+}
