@@ -1,0 +1,13 @@
+{
+  "name": "ideaone",
+  "version": "1.0.0",
+  "private": true,
+  "description": "IdeaOne marketing site with Vercel-ready contact form handling",
+  "scripts": {
+    "test": "node -e \"const handler = require('./api/contact'); if (typeof handler !== 'function') { throw new Error('contact handler not exported'); } console.log('contact handler ok');\""
+  },
+  "dependencies": {
+    "@supabase/ssr": "^0.12.0",
+    "@supabase/supabase-js": "^2.108.2"
+  }
+}
