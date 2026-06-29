@@ -1,0 +1,14 @@
+{
+  "name": "ideaone-site",
+  "version": "1.0.0",
+  "description": "IdeaOne static site with a backend contact form stored in MongoDB.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.1",
+    "express": "^4.18.3",
+    "mongodb": "^7.4.0"
+  }
+}
