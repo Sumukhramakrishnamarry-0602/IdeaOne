@@ -61,8 +61,11 @@ module.exports = async function handler(req, res) {
       .single();
 
     if (error) {
-      console.error('Supabase insert error:', error);
-      res.status(500).json({ error: error.message || 'Something went wrong while saving your message.' });
+      console.error('Supabase insert error:', JSON.stringify(error, null, 2));
+      res.status(500).json({
+        error: error.message || 'Something went wrong while saving your message.',
+        details: error
+      });
       return;
     }
 
