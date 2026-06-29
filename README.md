@@ -30,21 +30,12 @@ create table if not exists public.contact_submissions (
 
 alter table public.contact_submissions enable row level security;
 
-do $$
-begin
-  if not exists (
-    select 1 from pg_policies
-    where schemaname = 'public'
-      and tablename = 'contact_submissions'
-      and policyname = 'Allow anonymous inserts'
-  ) then
-    create policy "Allow anonymous inserts"
-      on public.contact_submissions
-      for insert
-      to anon
-      with check (true);
-  end if;
-end $$;
+drop policy if exists "Allow anonymous inserts" on public.contact_submissions;
+create policy "Allow anonymous inserts"
+  on public.contact_submissions
+  for insert
+  to anon
+  with check (true);
 ```
 
 ### Deploy
