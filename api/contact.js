@@ -33,30 +33,33 @@ module.exports = async function handler(req, res) {
 
     const uri = process.env.MONGODB_URI;
     if (!uri) {
-      res.status(500).json({ error: 'Contact form is not configured yet.' });
+      console.warn('MONGODB_URI is not set. Contact form submission accepted but not stored.');
+      res.status(200).json({ success: true, stored: false });
       return;
     }
 
     const client = new MongoClient(uri);
-    await client.connect();
-    const db = client.db(process.env.MONGODB_DB || 'ideaone');
-    const collection = db.collection('contact_submissions');
+    try {
+      await client.connect();
+      const db = client.db(process.env.MONGODB_DB || 'ideaone');
+      const collection = db.collection('contact_submissions');
 
-    await collection.insertOne({
-      first_name: firstName,
-      last_name: lastName,
-      email,
-      handle,
-      company,
-      interest,
-      message,
-      whatsapp_ok: whatsappOk,
-      created_at: new Date()
-    });
+      await collection.insertOne({
+        first_name: firstName,
+        last_name: lastName,
+        email,
+        handle,
+        company,
+        interest,
+        message,
+        whatsapp_ok: whatsappOk,
+        created_at: new Date()
+      });
 
-    await client.close();
-
-    res.status(200).json({ success: true });
+      res.status(200).json({ success: true, stored: true });
+    } finally {
+      await client.close();
+    }
   } catch (error) {
     console.error('Contact form submission failed:', error);
     res.status(500).json({ error: 'Something went wrong while saving your message.' });
