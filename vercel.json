@@ -1,5 +1,6 @@
 {
   "version": 2,
+<<<<<<< Updated upstream
   "builds": [
     {
       "src": "api/contact.js",
@@ -11,5 +12,9 @@
       "src": "/api/contact",
       "dest": "/api/contact.js"
     }
+=======
+  "routes": [
+    { "src": "/api/contact", "dest": "/api/contact.js" }
+>>>>>>> Stashed changes
   ]
 }

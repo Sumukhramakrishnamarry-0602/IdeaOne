@@ -1,4 +1,5 @@
 {
+<<<<<<< Updated upstream
   "name": "ideaone-site",
   "version": "1.0.0",
   "description": "IdeaOne static site with a backend contact form stored in MongoDB.",
@@ -10,5 +11,16 @@
     "dotenv": "^16.4.1",
     "express": "^4.18.3",
     "mongodb": "^7.4.0"
+=======
+  "name": "ideaone",
+  "version": "1.0.0",
+  "private": true,
+  "description": "IdeaOne marketing site with Vercel contact form support",
+  "scripts": {
+    "test": "node -e \"const handler = require('./api/contact'); if (typeof handler !== 'function') { throw new Error('contact handler not exported'); } console.log('contact handler ok');\""
+  },
+  "dependencies": {
+    "mongodb": "^6.10.1"
+>>>>>>> Stashed changes
   }
 }
