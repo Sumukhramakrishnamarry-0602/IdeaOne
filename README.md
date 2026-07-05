@@ -1,7 +1,9 @@
 # IdeaOne
-I started Vantage & Co because I noticed that many great brands looked weak online. They had strong ideas, but their websites, content, and digital presence didn’t reflect their actual value. I wanted to build something that brought all of that together — strategy, design, content, and growth systems — into one premium service.
+I started IdeaOne because I noticed that many great brands looked weak online. They had strong ideas, but their websites, content, and digital presence didn’t reflect their actual value. I wanted to build something that brought all of that together — strategy, design, content, and growth systems — into one premium service.
 
-Vantage & Co was created to help ambitious businesses and creators show up online with clarity, confidence, and credibility. We don’t just make things look good — we help brands convert attention into real business growth.
+IdeaOne was created to help ambitious businesses and creators show up online with clarity, confidence, and credibility. We don’t just make things look good — we help brands convert attention into real business growth.
+
+Live site: https://idea-one-ecru.vercel.app/
 
 ## Vercel deployment
 The contact form posts to /api/contact and is ready for Vercel serverless deployment.
@@ -10,7 +12,7 @@ The contact form posts to /api/contact and is ready for Vercel serverless deploy
 Add these in your Vercel project settings:
 - NEXT_PUBLIC_SUPABASE_URL: your Supabase project URL
 - NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: your Supabase publishable key
-- SUPABASE_SERVICE_ROLE_KEY: optional, recommended for server-side writes
+- SUPABASE_SERVICE_ROLE_KEY: required — the contact form API will return an error without it
 
 ### Create the Supabase table
 Run this SQL in your Supabase SQL editor:
